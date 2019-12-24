@@ -96,6 +96,7 @@ ADD start-freeswitch.sh /usr/bin/start-freeswitch.sh
 ADD bin/cpbx /opt/cpbx
 RUN chmod +x /opt/cpbx
 ADD config/config.json /opt/config.json
+ADD start-cpbx.sh /usr/bin/start-cpbx.sh
 
 EXPOSE 5060/udp
 EXPOSE 8080/tcp
