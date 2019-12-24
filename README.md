@@ -1,4 +1,6 @@
-Docker-compose file for developing for FusionPBX
+Docker-compose file for CPBX
 
-FusionPBX is running locally on 80/443 port.
-During install, specify db host `db`, username `fusionpbx`, password `4321`
+Put `cpbx` bin in `bin` folder and run
+`docker-compose up -d`
+
+Use https://localhost:8080/cweb to log in
