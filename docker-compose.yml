@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  fusionpbx:
+    build: .
+    volumes:
+      - ./fusionpbx:/var/www/fusionpbx
+    ports:
+      - "5060:5060/udp"
+      - "80:80"
+      - "443:443"
+    networks:
+      main:
+        aliases: 
+          - fusion
+    depends_on:
+      - db
+  db:
+      image: postgres:10-alpine
+      environment:
+        POSTGRES_DB: 'fusionpbx'
+        POSTGRES_USER: 'fusionpbx'
+        POSTGRES_PASSWORD: '4321'
+      networks:
+        main:
+          aliases:
+            - db
+networks:
+  main:
