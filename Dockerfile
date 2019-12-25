@@ -93,9 +93,6 @@ ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD start-freeswitch.sh /usr/bin/start-freeswitch.sh
 
 # CPBX part
-ADD bin/cpbx /opt/cpbx
-RUN chmod +x /opt/cpbx
-ADD config/config.json /opt/config.json
 ADD start-cpbx.sh /usr/bin/start-cpbx.sh
 
 EXPOSE 5060/udp

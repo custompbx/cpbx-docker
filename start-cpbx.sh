@@ -5,5 +5,6 @@ until $(nc -z 127.0.0.1 8021); do { printf '.'; sleep 1; }; done
 until $(nc -z db 5432); do { printf '.'; sleep 1; }; done
 
 # Start CPBX
+chmod +x /opt/cpbx
 cd /opt
 ./cpbx

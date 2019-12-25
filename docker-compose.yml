@@ -3,6 +3,8 @@ version: '3'
 services:
   cpbx:
     build: .
+    volumes:
+      - ./cpbx:/opt
     ports:
       - "5060:5060/udp"
       - "8080:8080/tcp"
