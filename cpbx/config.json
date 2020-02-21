@@ -2,36 +2,32 @@
     "freeswitch": {
         "esl": {
             "host": "127.0.0.1",
-            "port": "8021",
+            "port": 8021,
             "pass": "ClueCon",
-            "timeout": 10
+            "timeout": 10,
+            "collect_logs": 7
         }
     },
     "webserver": {
         "route": "/ws",
         "host": "0.0.0.0",
-        "port": "8080",
+        "port": 8080,
+        "stun_port": 3478,
         "cert_path": "/etc/freeswitch/tls/wss.pem",
         "key_path": "/etc/freeswitch/tls/wss.pem"
     },
     "xml_curl_server": {
         "route": "/conf/config",
         "host": "127.0.0.1",
-        "port": "8081",
+        "port": 8081,
         "cert_path": "/etc/freeswitch/tls/wss.pem",
         "key_path": "/etc/freeswitch/tls/wss.pem"
     },
     "database": {
         "name": "custompbx",
         "host": "db",
-        "port": "5432",
+        "port": 5432,
         "user": "custompbx",
         "pass": "custompbx"
-    },
-    "logging": {
-        "level": 5,
-        "syslog": false,
-        "file": "config.json",
-        "dir": "/var/log"
     }
 }
